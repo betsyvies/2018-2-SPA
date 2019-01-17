@@ -8,6 +8,11 @@ const changeView = hash => {
   }
 }
 
+const changeHome = () => {
+  getView('views/home.html')
+  window.location.hash = '/'
+}
+
 const getView = route => {
   fetch('http://localhost:5000/' + route)
   .then(response => response.text())
@@ -19,6 +24,5 @@ const showView = html => {
   return sectionMain.innerHTML = html
 }
 
-getView('views/catalogo.html')
-
+window.addEventListener('load', changeHome())
 if (("onhashchange" in window)) window.onhashchange = () => changeView(window.location.hash);
