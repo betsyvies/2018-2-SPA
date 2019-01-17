@@ -4,4 +4,9 @@ const getView = route => {
   .then(html => showView(html));
 }
 
+const showView = html => {
+  let sectionMain = document.getElementById('container');
+  return sectionMain.innerHTML = html
+}
+
 getView('views/catalogo.html')
