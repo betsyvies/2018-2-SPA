@@ -6,6 +6,10 @@ body {
   padding: 0;
 }
 
+.text-center {
+  text-align: center
+}
+
 .not-margin {
   margin: 0
 }
@@ -20,11 +24,20 @@ body {
 
 .flex {
   display: flex;
-  justify-content: center
+  justify-content: center;
+  align-items: center
 }
 
 .padding {
   padding: 1rem
+}
+
+.position {
+  position: relative;
+}
+
+.margin-top {
+  margin-top: 3rem
 }
 
 /* Style for header */
@@ -45,6 +58,15 @@ body {
 
 .link {
   text-decoration: none
+}
+
+/* Style for footer*/
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%
 }
 
 /* Style for 404.html */
@@ -113,9 +135,5 @@ body {
     margin-top: 0;
     background: white;
     box-shadow: none;
-  }
-
-  body {
-    border-top: 16px solid #ffa100;
   }
 }
