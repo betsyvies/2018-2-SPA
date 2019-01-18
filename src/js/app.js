@@ -4,7 +4,7 @@ const changeView = hash => {
     case '#/catalogo' : { return getView('views/catalogo.html') }
     case '#/accesorios' : { return getView('views/accesorios.html') }
     case '#/lugares' : { return getView('views/lugares.html') }
-    default: return console.log('404')
+    default: return getView('views/404.html')
   }
 }
 
