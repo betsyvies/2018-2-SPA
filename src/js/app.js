@@ -14,7 +14,7 @@ const changeHome = () => {
 }
 
 const getView = route => {
-  fetch('http://localhost:5000/' + route)
+  fetch('https://betsyvies.github.io/2018-2-SPA/src/' + route)
   .then(response => response.text())
   .then(html => showView(html));
 }
