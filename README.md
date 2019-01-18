@@ -1,9 +1,10 @@
 # Contenido de pill sobre diseño de un router para aplicaciones SPA con vanillajs
 
-[Demo](https://betsyvies.github.io/2018-2-SPA/src)
+[Aquí puedes ver la demo](https://betsyvies.github.io/2018-2-SPA/src)
 
 ## Getting started
 
+- Instalar dependencias: `npm install`
 - Servidor de desarrollo: `npm start`
 - Deploy a gh-pages: `npm deploy`
 
