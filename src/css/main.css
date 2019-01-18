@@ -37,7 +37,11 @@ body {
 }
 
 .margin-top {
-  margin-top: 3rem
+  margin-top: 2rem
+}
+
+.image {
+  width: 60%;
 }
 
 /* Style for header */
