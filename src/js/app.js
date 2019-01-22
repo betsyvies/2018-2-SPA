@@ -1,28 +1,25 @@
-const changeView = hash => {
+const changeTmp = (hash) => {
   switch (hash) {
-    case '#/' : { return getView('views/home.html') }
-    case '#/catalogo' : { return getView('views/catalogo.html') }
-    case '#/accesorios' : { return getView('views/accesorios.html') }
-    case '#/lugares' : { return getView('views/lugares.html') }
-    default: return getView('views/404.html')
+    case '' :
+    case '#' :
+    case '#/' : { return getTmp('home') }
+    case '#/catalogo' :
+    case '#/accesorios' :
+    case '#/lugares' : { return getTmp(hash.split('/')[1]) }
+    default: return getTmp('404')
   }
 }
 
-const changeHome = () => {
-  getView('views/home.html')
-  window.location.hash = '/'
+const getTmp = id => {
+  const template = document.getElementById(id)
+  showTmp(template.content.cloneNode(true))
 }
 
-const getView = route => {
-  fetch('https://betsyvies.github.io/2018-2-SPA/src/' + route)
-  .then(response => response.text())
-  .then(html => showView(html));
+const showTmp = html => {
+  const sectionMain = document.getElementById('container');
+  sectionMain.innerHTML = ''
+  sectionMain.appendChild(html)
 }
 
-const showView = html => {
-  let sectionMain = document.getElementById('container');
-  return sectionMain.innerHTML = html
-}
-
-window.addEventListener('load', changeHome())
-if (("onhashchange" in window)) window.onhashchange = () => changeView(window.location.hash);
+window.addEventListener('load', changeTmp(window.location.hash))
+if (("onhashchange" in window)) window.onhashchange = () => changeTmp(window.location.hash);
