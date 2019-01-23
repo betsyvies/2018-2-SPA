@@ -5,7 +5,10 @@ const changeTmp = (hash) => {
     case '#/' : { return getTmp('home') }
     case '#/catalogo' :
     case '#/accesorios' :
-    case '#/lugares' : { return getTmp(hash.split('/')[1]) }
+    case '#/lugares' : { 
+      const id = hash.split('/')[1];
+      return getTmp(id); 
+    }
     default: return getTmp('404')
   }
 }
