@@ -6,7 +6,7 @@
 
 - Instalar dependencias: `npm install`
 - Servidor de desarrollo: `npm start`
-- Deploy a gh-pages: `npm deploy`
+- Deploy a gh-pages: `npm run deploy`
 
 ## Pasos de la demo
 - Mostrar el producto terminado

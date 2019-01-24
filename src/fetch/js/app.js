@@ -14,7 +14,7 @@ const changeHome = () => {
 }
 
 const getView = route => {
-  fetch('https://betsyvies.github.io/2018-2-SPA/src/' + route)
+  fetch('https://betsyvies.github.io/2018-2-SPA/src/fetch/' + route)
   .then(response => response.text())
   .then(html => showView(html));
 }

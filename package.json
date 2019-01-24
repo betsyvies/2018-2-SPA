@@ -1,6 +1,7 @@
 {
   "name": "social-network",
   "version": "1.0.0",
+  "homepage": "https://betsyvies.github.io/2018-2-SPA/src/",
   "description": "Social Network @ Laboratoria",
   "main": "src/index.html",
   "keywords": [
@@ -11,6 +12,7 @@
   "license": "MIT",
   "scripts": {
     "start": "npx serve src/",
+    "deploy": "gh-pages -d src/",
     "htmlhint": "htmlhint dist/*.html ",
     "eslint": "eslint --ext .js src/ test/",
     "test": "jest --coverage"
